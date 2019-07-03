@@ -1,0 +1,32 @@
+﻿html {
+    background: #435058;
+    color: #C4D4E0;
+    font-family:Papyrus;
+}
+body {
+    text-align: center;
+}
+a:link {
+    color: #0ff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #bff;
+}
+
+a:hover {
+    color: #e2f;
+}
+
+a:active {
+    color: #ff2599;
+}
+nav{
+    display:block;
+    background:#5512aa;
+}
+footer{
+    font-size:10px;
+}
+

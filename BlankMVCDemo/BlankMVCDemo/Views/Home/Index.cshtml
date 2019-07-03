@@ -1,0 +1,26 @@
+﻿
+@{
+    int[] nums = { 42, 7, 28, 4, 5, 3 };
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Home Page</h1>  
+    <a asp-action="Index"> Home </a> &spades;<a asp-action="Info"> Info </a> &spades;
+    <p>The time is @DateTime.Now</p>
+    <p>
+        Our numbers are...
+        <ul>
+            @foreach (var num in nums)
+            {
+                <li>@num</li>}
+        </ul>
+    </p>
+</body>
+</html>
