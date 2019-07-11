@@ -1,0 +1,25 @@
+﻿@using FormsDemo.Models
+@model Zombie
+
+@{ 
+    int index = ViewBag.Index ?? -2;
+    //?? null coalescer use value if not null else use second value
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateZombie</title>
+</head>
+<body>
+    <form method="post" action="~/Zombie/CreateZombie">
+        <input type="hidden" name="index" value="@index"/><br/>
+        <input type="text" name="name" placeholder="Zombie Name"/><br/>
+        <input type="text" name="zedType" placeholder="Zombie Type"/><br/>
+        <input type="number" min="0" name="hoursUndead" placeholder="Hours Undead"/><br/>
+        <input type="submit" value="Create Zombie"/>
+    </form>
+</body>
+</html>

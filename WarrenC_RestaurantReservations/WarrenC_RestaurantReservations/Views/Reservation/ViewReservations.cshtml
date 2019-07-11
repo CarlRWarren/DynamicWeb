@@ -1,0 +1,50 @@
+﻿@using WarrenC_RestaurantReservations.Models
+@using WarrenC_RestaurantReservations.Controllers
+@model List<Reservation>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>ViewReservations</title>
+</head>
+<body>
+    <header>College Spot</header>
+    <a asp-action="Index" asp-controller="Home">Home</a>
+    <a asp-action="CreateReservation" asp-controller="Reservation">Create Reservation</a>
+    <a asp-action="ViewReservations" asp-controller="Reservation">View Reservations</a>
+    @{
+        Model.Sort((x, y) => DateTime.Compare(x.ReservationTime, y.ReservationTime));
+    }
+    @if (Model.Count == 0 || Model == null)
+    {
+        <h2>There are no Reservations to display</h2>
+    }
+    else
+    {
+        <ul>
+            @foreach (Reservation res in Model)
+            {
+                if (res != null)
+                {
+                    <li>
+                        @{
+                            string[] lines = res.ToString().Split('.');
+
+                            @foreach (string line in lines)
+                            {
+                                @line<br />
+                            }
+                        }
+                        <button name="edit" onclick="">Edit</button>
+                        <button name="delete" onclick="" asp-action="ViewReservations" asp-controller="Reservation">Delete</button>
+                    </li>
+                }
+            }
+        </ul>
+    }
+    <footer>Copyright&copy;</footer>
+</body>
+</html>

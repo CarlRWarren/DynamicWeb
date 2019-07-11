@@ -1,0 +1,19 @@
+﻿html{
+    background:#4533f0;
+}
+body {
+    text-align: center;
+    font-family:'Bookman Old Style';
+}
+footer{
+    vertical-align:bottom;
+}
+a:link{
+    color:#ff3300;
+}
+a:visited{
+    color:#dd3;
+}
+ul{
+    list-style-type:none;
+}

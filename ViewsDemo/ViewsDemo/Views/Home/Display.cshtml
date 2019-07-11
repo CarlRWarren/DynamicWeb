@@ -1,0 +1,21 @@
+﻿@* Make strongly typed view for a single movie
+    Title of tab to title of film
+    Body display the data of movie
+    At top of body link to home *@
+@using ViewsDemo.Models
+@model Movie
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.Title</title>
+</head>
+<body>
+    <a  href="/">Home</a>
+    @*<a asp-action="Index" asp-controller="Home">Home</a>*@
+    <p>@Model.Title : @Model.Year</p>
+    <p>@Model.StarRating stars out of 10</p>
+    @* (@Whatever you need in razor syntax)  keeps c# in ()*@
+</body>
+</html>
