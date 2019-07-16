@@ -1,0 +1,55 @@
+﻿@using WarrenC_RestaurantReservations.Models
+@model Reservation
+@*@{
+        int index = ViewBag.Index ?? -1;
+    }*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <title>Edit Reservation</title>
+</head>
+<body>
+    <header>College Spot</header>
+    <a asp-action="Index" asp-controller="Home">Home</a>
+    <a asp-action="CreateReservation" asp-controller="Reservation">Create Reservation</a>
+    <a asp-action="ViewReservations" asp-controller="Reservation">View Reservations</a>
+    <form method="post" action="~/Reservation/EditReservation">
+        <input type="datetime-local" name="reservationTime" placeholder="Date of Reservation" value="@Model.ReservationTime" /><br />
+        <input type="text" name="name" placeholder="Party Name" value="@Model.Name" /><br />
+        <input type="number" min="1" name="partySize" placeholder="Party Size" value="@Model.PartySize" /><br />
+        @if (Model.Smoking!=null)
+        {
+            <label title="Smoking">
+                Smoking<input type="checkbox" name="smoking" checked="checked" value="1"/><br />
+            </label>
+        }
+        else
+        {
+            <label title="Smoking">
+                Smoking<input type="checkbox" name="smoking"  value="1"/><br />
+            </label>
+        }
+        <input type="text" name="specialInstructions" placeholder="Special Instructions" value="@Model.SpecialInstructions" /><br />
+        <input type="tel" name="contactNumber" placeholder="Contact Number" value="@Model.ContactNumber" /><br />
+        @if (Model.OkToText != null)
+        {
+            <label title="Texting">
+                Is it ok to text<input type="checkbox" name="okToText" checked="checked" value="1"/><br />
+            </label>
+        }
+        else
+        {
+            <label title="Texting">
+                Is it ok to text<input type="checkbox" name="okToText" value="1"/><br />
+            </label>
+        }
+
+        <input type="submit" value="Edit Reservation" />
+    </form>
+    <footer>Copyright&copy;</footer>
+</body>
+</html>

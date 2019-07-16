@@ -24,3 +24,4 @@ C:\Users\Carl\OneDrive - Neumont University\Q8\DynamicWeb\DynamicWeb\WarrenC_Res
 C:\Users\Carl\OneDrive - Neumont University\Q8\DynamicWeb\DynamicWeb\WarrenC_RestaurantReservations\WarrenC_RestaurantReservations\obj\Debug\netcoreapp2.1\Razor\Views\Reservation\CreateReservation.g.cshtml.cs
 C:\Users\Carl\OneDrive - Neumont University\Q8\DynamicWeb\DynamicWeb\WarrenC_RestaurantReservations\WarrenC_RestaurantReservations\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\Carl\OneDrive - Neumont University\Q8\DynamicWeb\DynamicWeb\WarrenC_RestaurantReservations\WarrenC_RestaurantReservations\obj\Debug\netcoreapp2.1\Razor\Views\Reservation\ViewReservations.g.cshtml.cs
+C:\Users\Carl\OneDrive - Neumont University\Q8\DynamicWeb\DynamicWeb\WarrenC_RestaurantReservations\WarrenC_RestaurantReservations\obj\Debug\netcoreapp2.1\Razor\Views\Reservation\EditReservation.g.cshtml.cs

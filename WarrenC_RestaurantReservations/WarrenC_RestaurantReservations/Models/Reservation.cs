@@ -22,7 +22,7 @@ namespace WarrenC_RestaurantReservations.Models
         {
             smokers = Smoking=="1" ? "with smoking" : "without smoking";
             textable = OkToText=="1" ? "is textable" : "isn't textable";
-            return $"{Name}: {ReservationTime}. Party of {PartySize} {smokers}. SpecialInstructions:{SpecialInstructions}. ContactNumber:{ContactNumber} {textable}.";
+            return $"{Name}: {ReservationTime}. Party of {PartySize} {smokers}. Special Instructions:{SpecialInstructions}. Contact Number:{ContactNumber} {textable}.";
         }
 
     }

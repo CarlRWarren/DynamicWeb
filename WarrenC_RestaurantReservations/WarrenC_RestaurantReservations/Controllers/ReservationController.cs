@@ -24,19 +24,35 @@ namespace WarrenC_RestaurantReservations.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public static int ind;
+        [HttpGet]
+        public IActionResult EditReservation(int index)
+        {
+            ind = index;
+            return View(reservations[index]);
+        }
+
+        [HttpPost]
+        public IActionResult EditReservation(Reservation reservation)
+        {
+            reservations[ind] = reservation;
+            return RedirectToAction("ViewReservations", "Reservation");
+        }
+
         public static void AddReservation(Reservation reservation)
         {
             reservations.Add(reservation);
         }
-
-        public static void RemoveReservation(Reservation reservation)
-        {
-            reservations.Remove(reservation);
-        }
-
+        [HttpGet]
         public IActionResult ViewReservations()
         {
             return View(reservations);
+        }
+        [HttpGet]
+        public IActionResult RemoveReservations(int index)
+        {
+            reservations.RemoveAt(index);
+            return RedirectToAction("ViewReservations", "Reservation");
         }
     }
 }

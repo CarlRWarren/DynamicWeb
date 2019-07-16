@@ -1,0 +1,21 @@
+﻿@using MadForInputs.Models
+@model Madlib
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MadLibForm</title>
+</head>
+<body>
+    <form method="post" action="~/Home/MadLibForm">
+        <input type="text" placeholder="Noun" name="word1"/>
+        <input type="text" placeholder="Adverb" name="word2"/>
+        <input type="text" placeholder="Verb" name="word3"/>
+        <input type="text" placeholder="Proper Noun" name="word4"/>
+        <input type="text" placeholder="Noun" name="word5"/>
+        <input type="submit" value="Create Madlib" />
+    </form>
+</body>
+</html>

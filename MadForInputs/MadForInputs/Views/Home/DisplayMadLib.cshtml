@@ -1,0 +1,16 @@
+﻿@model List<string>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MadLib</title>
+</head>
+<body>
+    <a asp-action="MadLibForm">Inputs</a>
+    <p>There once was a <strong>@Model[0]</strong> who got lost while <strong>@Model[1] @Model[2]</strong>. You may</p>
+    <p>wonder how a <strong>@Model[0]</strong> got lost but it's not hard to imagine when <strong>@Model[3]</strong> is</p>
+    <p>involved. Especially when <strong>@Model[3]</strong> is giving away free <strong>@Model[4]</strong></p>
+</body>
+</html>
