@@ -11,5 +11,7 @@ namespace ReusableComponentsDemo.Models
         public int NumberOfArms { get; set; }
         public int NumberOfLegs { get; set; }
         public string ImageName { get; set; } = "Walker.jpg";
+        public int HoursUndead { get; set; }
+        public float StinkRatio { get; set; } = 0.5f;
     }
 }

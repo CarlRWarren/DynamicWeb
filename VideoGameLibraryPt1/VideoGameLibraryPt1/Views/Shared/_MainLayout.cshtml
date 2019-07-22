@@ -1,0 +1,18 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/main.css" rel="stylesheet" />
+    <title>@RenderSection("Title", false)</title>
+</head>
+<body>
+    <header>Video Game Archive</header>
+    <nav>
+        <a asp-action="Index" asp-controller="Home">Home</a>&emsp;
+        <a asp-action="DisplayGames" asp-controller="Home">Display Zeds</a>
+    </nav>
+    @RenderBody()
+</body>
+</html>

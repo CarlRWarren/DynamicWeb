@@ -5,7 +5,7 @@
     Display Zeds
 }
 
-@if(Model==null || Model.Count == 0)
+@if (Model == null || Model.Count == 0)
 {
     <h1 class="urgentMessage">There is no info to display</h1>
 }
@@ -13,10 +13,6 @@ else
 {
     for (int i = 0; i < Model.Count; i++)
     {
-    <div class="zed">
-        <p><strong>Type: @Model[i].ZedType</strong></p>
-        <img src="~/images/@Model[i].ImageName" />
-        <p>Has @Model[i].NumberOfArms arms and @Model[i].NumberOfLegs legs</p>
-    </div>
+       <partial name="_DisplayZedPartial" model="@Model[i]"/>
     }
 }

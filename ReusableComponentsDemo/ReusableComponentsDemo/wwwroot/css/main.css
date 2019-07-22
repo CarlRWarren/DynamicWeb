@@ -49,5 +49,25 @@ a:visited {
     color:#6B1913;
 }
 .zed {
-    color: #881913;
+    background-color: darkblue;
+    display: inline-block;
+    height: 170px;
+    width: 220px;
+    border-radius: 15px;
+}
+.inline {
+    display: inline-block;
+    height: 150px;
+    margin: 0;
+    vertical-align: top;
+}
+
+.zed img {
+    height: 150px;
+    width: 100px;
+    padding: 10px;
+}
+
+.zed p {
+    color: white;
 }

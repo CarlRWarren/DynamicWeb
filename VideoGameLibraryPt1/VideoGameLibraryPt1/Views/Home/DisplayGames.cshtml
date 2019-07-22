@@ -1,0 +1,17 @@
+﻿@using VideoGameLibraryPt1.Models
+@model List<Game>
+@section Title{
+    Games
+}
+@* add search on single word and filter on any point of data *@
+@if (Model == null || Model.Count == 0)
+{
+    <h1 class="urgentMessage">There are no games here</h1>
+}
+else
+{
+    for (int i = 0; i < Model.Count; i++)
+    {
+        <partial name="_DisplayGamesPartial" model="@Model[i]" />
+    }
+}

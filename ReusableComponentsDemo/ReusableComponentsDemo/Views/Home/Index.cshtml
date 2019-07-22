@@ -1,4 +1,5 @@
-﻿
+﻿@using ReusableComponentsDemo.Models
+@model Zombie
 @section Title{
     Home Page
 }
@@ -8,6 +9,15 @@
         Pro tip: Always aim for head and double tap.
     </article>
 }
+
+@section FeaturedZed{
+    @if (Model != null)
+    {
+        <h2>Featured Zombie</h2>
+        @Html.Partial("_DisplayZedPartial", Model)
+    }
+}
+
 <article>
     Welcome to ZombieLand where we have all Z info on the undead*
 </article>

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@* _ infront of name maskes it so mvc never trys to serve it up on its own *@
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -14,13 +15,15 @@
         <a asp-action="DisplayZeds" asp-controller="Home">Display Zeds</a>
     </nav>
     <div class="mainContent mainLeftMargin">
-        @RenderBody()
         @if (IsSectionDefined("BonusInfo"))
         {
             <div class="floatRight bonusPanel">
                 @RenderSection("BonusInfo")
             </div>
         }
+        @RenderSection("FeaturedZed", false)
+        @RenderBody()
+
     </div>
 
     <footer class="mainLeftMargin">*Liches, vampires, mummies, animated skeletons, and most Pokemon are excluded</footer>
