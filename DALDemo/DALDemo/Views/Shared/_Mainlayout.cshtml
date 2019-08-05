@@ -1,0 +1,31 @@
+﻿@* _ infront of name maskes it so mvc never trys to serve it up on its own *@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/main.css" rel="stylesheet" />
+    <title>@RenderSection("Title", false)</title>
+</head>
+<body>
+    <header class="mainContentHeader mainLeftMargin">ZombieLand: All Z Info</header>
+    <nav class="mainLeftMargin">
+        <a asp-action="Index" asp-controller="Home">Home</a>&emsp;
+        <a asp-action="AboutZeds" asp-controller="Home">About Zeds</a>&emsp;
+        <a asp-action="DisplayZeds" asp-controller="Home">Display Zeds</a>
+    </nav>
+    <div class="mainContent mainLeftMargin">
+        @if (IsSectionDefined("BonusInfo"))
+        {
+            <div class="floatRight bonusPanel">
+                @RenderSection("BonusInfo")
+            </div>
+        }
+        @RenderSection("FeaturedZed", false)
+        @RenderBody()
+
+    </div>
+
+    <footer class="mainLeftMargin">*Liches, vampires, mummies, animated skeletons, and most Pokemon are excluded</footer>
+</body>
+</html>

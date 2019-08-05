@@ -1,0 +1,73 @@
+﻿body {
+    background-color: black;
+    background-image:url("/images/Zombie Hands on Left.jpg");
+    background-repeat:no-repeat;
+    background-size:1000px;
+}
+.mainContent{
+    border:solid 1px #1d3c1c;
+    border-radius:15px;
+    background-color:rgba(45,84,43,0.86);
+    width:450px;
+    padding: 50px 50px 50px 150px;
+}
+
+.navBar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: blue;
+}
+.mainLeftMargin{
+    margin-left:500px;
+}
+.mainContentHeader{
+    margin-left:0px;
+    text-align:center;
+    color:orange;
+    font-size:3em;
+}
+.floatRight{
+    float:right;
+}
+.bonusPanel{
+    width:200px;
+    background-color:mediumpurple;
+    color:yellow;
+    margin:0px 0px 0px 20px;
+    padding:10px;
+    border-radius:15px;
+}
+.urgentMessage{
+    font-weight:700;
+    color:#6B1913;
+}
+.zed {
+    background-color: darkblue;
+    display: inline-block;
+    height: 170px;
+    width: 220px;
+    border-radius: 15px;
+}
+.inline {
+    display: inline-block;
+    height: 150px;
+    margin: 0;
+    vertical-align: top;
+}
+
+.zed img {
+    height: 150px;
+    width: 100px;
+    padding: 10px;
+}
+
+.zed p {
+    color: white;
+}

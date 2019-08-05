@@ -1,0 +1,11 @@
+﻿@using DALDemo.Models
+@model Zombie
+<div class="zed">
+    <img src="~/images/@Model.ImageName" />
+    <div class="inline">
+        <p>Type: @Model.ZedType</p>
+        <p>Arms: @Model.NumberOfArms</p>
+        <p>Legs: @Model.NumberOfLegs</p>
+        <p>HU: @Model.HoursUndead</p>
+    </div>
+</div>

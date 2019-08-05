@@ -1,0 +1,18 @@
+﻿@using DALDemo.Models
+@model List<Zombie>
+@section Title
+{
+    Display Zeds
+}
+
+@if (Model == null || Model.Count == 0)
+{
+    <h1 class="urgentMessage">There is no info to display</h1>
+}
+else
+{
+    for (int i = 0; i < Model.Count; i++)
+    {
+       <partial name="_DisplayZedPartial" model="@Model[i]"/>
+    }
+}
